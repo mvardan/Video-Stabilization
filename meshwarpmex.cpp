@@ -19,7 +19,7 @@
 
 #include "mex.h"
 #define GL_GLEXT_PROTOTYPES
-#include <gl/glut.h>
+#include <GL/glut.h>
 #include <boost/la/all.hpp>
 #include <vector>
 

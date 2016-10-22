@@ -20,7 +20,7 @@ clear all;
 video_file = 'dolly2';
 
 [gyro frame_time] = import_video_data(video_file);
-run ../vlfeat-0.9.9/toolbox/vl_setup.m
+run ../vlfeat-0.9.20/toolbox/vl_setup.m
 
 warning('off', 'Images:initSize:adjustingMag');
 

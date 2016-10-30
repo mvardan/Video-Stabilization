@@ -16,7 +16,7 @@
 
 function video_to_tga(video_file)
 
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = videoreader(['data/' video_file '.mp4']);
 display(xyloObj);
 num_frames = xyloObj.NumberOfFrames;
 

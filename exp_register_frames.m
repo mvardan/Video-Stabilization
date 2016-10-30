@@ -30,7 +30,7 @@ warning('off', 'Images:initSize:adjustingMag');
 %% 
 
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = VideoReader(['data/frames.mp4']);
 display(xyloObj);
 
 num_frames = xyloObj.NumberOfFrames;
@@ -87,7 +87,7 @@ end
 load(['mat/exp_register_frames_' transformtype '.mat'], 'W', 'transformtype', 'c', 't0', 'ts');
 %%
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = VideoReader(['data/frames.mp4']);
 display(xyloObj);
  
 num_frames = xyloObj.NumberOfFrames;
@@ -121,7 +121,7 @@ close(outvid);
 %%
 
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = videoreader(['data/' video_file '.mp4']);
 display(xyloObj);
 
 num_frames = xyloObj.NumberOfFrames;
@@ -182,7 +182,7 @@ t = reshape(tx(1,1:2,:), 2, num_frames-1)';
 %%
 
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = videoreader(['data/' video_file '.mp4']);
 display(xyloObj);
 
 num_frames = xyloObj.NumberOfFrames;
@@ -252,7 +252,7 @@ g = g + d(ones(size(g,1),1),:);
 dths = dths(2:end,:);
 
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = videoreader(['data/' video_file '.mp4']);
 display(xyloObj);
 num_frames = xyloObj.NumberOfFrames;
 vid_height = xyloObj.Height;
@@ -304,7 +304,7 @@ g = g + d(ones(size(g,1),1),:);
 dths = dths(2:end,:);
 
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = videoreader(['data/' video_file '.mp4']);
 display(xyloObj);
  
 num_frames = xyloObj.NumberOfFrames;
@@ -359,7 +359,7 @@ g = g + d(ones(size(g,1),1),:);
 dths = dths(2:end,:);
 
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = videoreader(['data/' video_file '.mp4']);
 display(xyloObj);
  
 num_frames = xyloObj.NumberOfFrames;
@@ -422,7 +422,7 @@ g = g + d(ones(size(g,1),1),:);
 [dth, theta] = frame_rotations_non_lin(g, gyro(:,4), frame_time, t0, ts);
 
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = videoreader(['data/' video_file '.mp4']);
 display(xyloObj);
  
 num_frames = xyloObj.NumberOfFrames;
@@ -480,7 +480,7 @@ theta = ((gyro(1:end-1,1:3) + gyro(2:end,1:3)) / 2) .* dgt(:,[1 1 1]);
 theta = [0 0 0; cumsum(theta, 1)];
 
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = videoreader(['data/' video_file '.mp4']);
 display(xyloObj);
  
 num_frames = xyloObj.NumberOfFrames;

@@ -35,7 +35,7 @@ d = -mean(gyro(:,1:3),1);
 %d = [0 0 0];        % gyro drift
 
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = videoreader(['data/' video_file '.mp4']);
 num_frames = xyloObj.NumberOfFrames;
 vid_height = xyloObj.Height;
 vid_width = xyloObj.Width;

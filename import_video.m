@@ -17,7 +17,7 @@
 function [mov num_frames vid_height vid_width frame_rate duration] = import_video(file)
 
 % read corresponding movie
-xyloObj = mmreader(['data/' file '.mov']);
+xyloObj = VideoReader(['data/' file '.mp4']);
 display(xyloObj);
 
 num_frames = xyloObj.NumberOfFrames;

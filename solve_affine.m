@@ -29,7 +29,7 @@ alpha_t0 = 1e-12;
 alpha_ts = 1e-12;
 
 % read corresponding movie
-xyloObj = mmreader(['data/' video_file '.mov']);
+xyloObj = videoreader(['data/' video_file '.mp4']);
 num_frames = xyloObj.NumberOfFrames;
 vid_height = xyloObj.Height;
 vid_width = xyloObj.Width;

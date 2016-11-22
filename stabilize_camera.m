@@ -56,7 +56,7 @@ num_frames = xyloObj.NumberOfFrames;
 vid_height = xyloObj.Height;
 vid_width = xyloObj.Width;
 
-crop_amount = 50;
+crop_amount = 0;
 
 frame = read(xyloObj, 1);
 outvid = VideoWriter(['mat/' video_file '_meshwarp_large.avi']);
@@ -66,12 +66,12 @@ writeVideo(outvid, cropim(frame, crop_amount, crop_amount));
 % Read one frame at a time.
 for f = 1:num_frames-1
     frame = read(xyloObj, f+1);
-%     imshow(warped);
-%     pause(0.1);
+     %imshow(frame);
+     %pause(0.1);
     
     stabilized = meshwarp(frame, dth(f,:), theta, gyro(:,4), frame_time(f+1), td, ts, fl);
-%     imshow(stabilized);
-%     pause(0.1);
+     %imshow(stabilized);
+     %pause(0.1);
 
     writeVideo(outvid, cropim(stabilized, crop_amount, crop_amount));
     display([num2str(f+1) ' of ' num2str(num_frames)]);
